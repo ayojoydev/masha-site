@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Интерактивный слайдер "Было/Стало"
     const slider = document.getElementById('ba-slider');
-    const beforeImage = document.querySelector('.ba-image.before');
+    const sliderContainer = document.querySelector('.before-after-slider');
     const sliderLine = document.querySelector('.ba-line');
     const sliderHandle = document.querySelector('.ba-handle');
 
     if (slider) {
         slider.addEventListener('input', (e) => {
             const sliderValue = e.target.value;
-            // Обновляем ширину изображения "До" (черно-белого)
-            beforeImage.style.width = `${sliderValue}%`;
+            // Используем CSS-переменную для управления clip-path
+            sliderContainer.style.setProperty('--clip-position', `${sliderValue}%`);
             // Передвигаем линию и ползунок
             sliderLine.style.left = `${sliderValue}%`;
             sliderHandle.style.left = `${sliderValue}%`;

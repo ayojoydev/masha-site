@@ -343,6 +343,8 @@ figcaption, .gallery-caption {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     /* Set an aspect ratio roughly matching the image */
     aspect-ratio: 4/3;
+    /* Устанавливаем переменную для JS */
+    --clip-position: 50%;
 }
 
 .ba-image {
@@ -362,8 +364,10 @@ figcaption, .gallery-caption {
 }
 
 .ba-image.before {
-    width: 50%;
-    border-right: 2px solid white;
+    /* Используем clip-path вместо width для обрезки без искажений */
+    clip-path: inset(0 calc(100% - var(--clip-position)) 0 0);
+    width: 100%; /* Возвращаем 100%, чтобы картинка не сжималась */
+    border-right: none; /* Убираем бордер, его рисует .ba-line */
 }
 
 .ba-slider {
