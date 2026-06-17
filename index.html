@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Славянский лубок: Народный комикс</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">ОКНАnews: Лубок</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Начало</a></li>
+            <li><a href="#intro">Суть</a></li>
+            <li><a href="#archives">Архивы</a></li>
+            <li><a href="#timeline">История</a></li>
+            <li><a href="#interactive">Интерактив</a></li>
+        </ul>
+        <button id="audio-toggle" class="audio-btn">
+            <span class="icon">🔊</span> Звук
+        </button>
+    </nav>
+
+    <!-- Фоновое аудио (интершум: ярмарка/гуляния) -->
+    <audio id="bg-audio" loop>
+        <source src="assets/bg-audio.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <!-- 1. Экспозиция / Обложка -->
+    <header id="hero" class="section hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h3 class="hero-subtitle">Мультимедийный лонгрид</h3>
+            <h1 class="hero-title">СЛАВЯНСКИЙ ЛУБОК</h1>
+            <p class="hero-description">Потешный лист, ставший первым массовым медиа в России.</p>
+            <p class="hero-scroll-hint">Листайте вниз ↓</p>
+        </div>
+    </header>
+
+    <!-- 2. Суть и конфликт -->
+    <section id="intro" class="section content-section">
+        <div class="container">
+            <h2 class="section-heading">Что такое лубок?</h2>
+            <div class="text-columns">
+                <p class="drop-cap">Лубо́к (лубочная картинка, потешный лист, простовик) — вид графики, изображение с подписью, отличающееся простотой и доступностью образов. В эпоху, когда книги были непомерно дороги и доступны лишь избранным, именно лубок стал главным источником информации, развлечения и политической сатиры для простого народа.</p>
+                <p>Его конфликт — это противостояние «высокой» культуры дворцов и «низовой» культуры улиц. Лубок высмеивал пороки, рассказывал новости, пугал концом света и учил грамоте. Это был интернет, телевизор и комикс XVII–XIX веков, объединенные в одном бумажном листе.</p>
+            </div>
+            
+            <figure class="full-width-image">
+                <img src="assets/mice-cat.jpg" alt="Мыши кота хоронят">
+                <figcaption>Знаменитый лубок «Мыши кота погребают» — скрытая сатира на похороны Петра I.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- 3. Архивы (Требование: архивы библиотек/музеев Санкт-Петербурга) -->
+    <section id="archives" class="section dark-section">
+        <div class="container">
+            <h2 class="section-heading">Сокровища Петербургских архивов</h2>
+            <p class="text-center pb-2">Материалы предоставлены из фондов Отдела эстампов Российской национальной библиотеки (Санкт-Петербург).</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="assets/baba-yaga.jpg" alt="Баба-Яга">
+                    <div class="gallery-caption">Баба-Яга едет с крокодилом драться. Фонды РНБ.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/farnos.jpg" alt="Фарнос Красный Нос">
+                    <div class="gallery-caption">Фарнос Красный Нос. Гравюра на дереве, XVIII в. Отдел эстампов РНБ.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Видео (Требование: видео-фрагменты) -->
+    <section id="video-block" class="section content-section">
+        <div class="container">
+            <h2 class="section-heading">Как резали по дереву</h2>
+            <p>Технология создания лубка была трудоемкой. Изначально мастера вырезали изображение на липовых досках (лубе), затем наносили краску и делали оттиск на бумаге. Позже контур стали раскрашивать от руки яркими анилиновыми красками в специальных артелях. Посмотрите короткий фрагмент о процессе создания гравюры.</p>
+            <div class="video-container">
+                <!-- Вставка видео (до 2 мин), используем заглушку образовательного видео -->
+                <iframe width="560" height="315" src="https://youtu.be/m8L1E0l6k5A?si=AJACrNFMrKc143TW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Инфографика / Таймлайн (Требование: таймлайн) -->
+    <section id="timeline" class="section gray-section">
+        <div class="container">
+            <h2 class="section-heading">Эволюция жанра</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Начало XVII века</h3>
+                        <p>Появление первых печатных листов в России. Техника: ксилография (гравюра на дереве). Основная тематика — религиозная (иконы на бумаге).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>XVIII век</h3>
+                        <p>Петр I вводит моду на светские сюжеты. Появляются "потешные листы" с сатирой, новостями, модами, азбуками. Переход к гравюре на меди, что позволило делать более тонкий рисунок.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>XIX век</h3>
+                        <p>Золотой век лубка. Появление литографии (печать с камня). Огромные тиражи. Возникновение артелей "цветочниц" (женщин, раскрашивавших листы в деревнях). Лубок проникает в каждую крестьянскую избу.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Начало XX века</h3>
+                        <p>Упадок традиционного лубка с развитием типографского дела и фотографии. Однако стилистика лубка перерождается в советском агитационном плакате (Окна РОСТА).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Интерактив: Было/Стало (Требование: интерактивность) -->
+    <section id="interactive" class="section content-section">
+        <div class="container">
+            <h2 class="section-heading">Магия цвета: До и После</h2>
+            <p class="text-center pb-2">Потяните ползунок, чтобы увидеть, как черно-белый оттиск превращался в готовый лубок после работы артелей-раскрасчиков.</p>
+            
+            <div class="before-after-slider">
+                <div class="ba-image after">
+                    <img src="assets/slider-after.jpg" alt="Цветной лубок">
+                </div>
+                <div class="ba-image before">
+                    <img src="assets/slider-before.jpg" alt="Черно-белый контур">
+                </div>
+                <input type="range" min="0" max="100" value="50" id="ba-slider" class="ba-slider">
+                <div class="ba-line"></div>
+                <div class="ba-handle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал / Вывод -->
+    <footer class="footer">
+        <div class="container">
+            <h3>Проект подготовлен в рамках учебной практики</h3>
+            <p>Студент: [ФИО Студента]<br>Учебная практика</p>
+            <p class="footer-note">Использованы материалы РНБ и открытых источников.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
